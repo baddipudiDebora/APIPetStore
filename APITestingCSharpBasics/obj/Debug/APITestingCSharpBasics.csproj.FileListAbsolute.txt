@@ -1,0 +1,11 @@
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\bin\Debug\APITestingCSharpBasics.exe.config
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\bin\Debug\APITestingCSharpBasics.exe
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\bin\Debug\APITestingCSharpBasics.pdb
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\obj\Debug\APITestingCSharpBasics.csproj.AssemblyReference.cache
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\obj\Debug\APITestingCSharpBasics.csproj.SuggestedBindingRedirects.cache
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\obj\Debug\APITestingCSharpBasics.csproj.CoreCompileInputs.cache
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\obj\Debug\APITestingCSharpBasics.exe
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\obj\Debug\APITestingCSharpBasics.pdb
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\19055\source\repos\APITestingCSharpBasics\APITestingCSharpBasics\obj\Debug\APITestingCSharpBasics.csproj.CopyComplete
