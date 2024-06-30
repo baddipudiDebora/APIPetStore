@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "067d4c0b-13e5-49f0-a7b0-83542b3b1c94": {
+      "ProjectGuid": "067d4c0b-13e5-49f0-a7b0-83542b3b1c94",
+      "DisplayName": "APITestingCSharpBasics",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
