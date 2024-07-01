@@ -11,52 +11,53 @@ namespace APITestingCSharpBasics
 {
     internal class Program
     {
+        static string baseURL = ConfigurationManager.AppSettings["applicationBaseURL"];
+        static  HttpWebRequest myHttpWebRequest;
+        static string requestURL;
+        Uri myUri;
         static void Main(string[] args)
         {
-           sendValidAPIRequest("1");
-      //     sendInvalidAPIRequest("100");
+            testGETPetbyID("1");
         }
 
-        public static void sendValidAPIRequest(string petID)
-        {
-            string baseURL = ConfigurationManager.AppSettings["applicationBaseURL"];
-            string requestURL = string.Format("{0}{1}{2}", baseURL, "pet/", petID);
+        public static void testGETPetbyID(string petID)
+        {            
+           formAPIRequestURL(petID);
+           formHttpRequestObject();
+           sendAPIRequest();
+        }
+
+
+        // 1. form the request url
+        public static void formAPIRequestURL(string petID)
+        {     
+            requestURL = string.Format("{0}{1}{2}", baseURL, "pet/", petID);
             Console.WriteLine(requestURL);
-            Thread.Sleep(3000);
-            // 1. Create a 'HttpWebRequest' object for the specified url.
-            Uri myUri = new Uri(requestURL);
+            Thread.Sleep(2000);
+        }
 
-            // Create a 'HttpWebRequest' object for the specified url.
-            HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(myUri);
-
-            try
-            {
-                // Send the request and wait for response.
-                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
-                Console.WriteLine(myHttpWebResponse.StatusCode);
-                Thread.Sleep(1000);
-                myHttpWebResponse.Close();
+        // 2. Create a 'HttpWebRequest' object for the specified url.
+        public static HttpWebRequest formHttpRequestObject()
+        {
+           try
+            {     
+                Uri myUri = new Uri(requestURL);
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(myUri);
+                return myHttpWebRequest;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Thread.Sleep(3000);
+                return myHttpWebRequest;
             }
-
+           
         }
-        public static void sendInvalidAPIRequest(string petID)
+
+        // 3. Send the request and wait for response.
+        public static void sendAPIRequest()
         {
-            string requestURL = "https://petstore.swagger.io/v2/pet/"+petID;
-            // 1. Create a 'HttpWebRequest' object for the specified url.
-            Uri myUri = new Uri(requestURL);
-
-            // Create a 'HttpWebRequest' object for the specified url.
-            HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(myUri);
-
             try
-            {
-                // Send the request and wait for response.
-                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+            {               
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)formHttpRequestObject().GetResponse();
                 Console.WriteLine(myHttpWebResponse.StatusCode);
                 Thread.Sleep(1000);
                 myHttpWebResponse.Close();
